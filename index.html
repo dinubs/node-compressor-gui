@@ -3,11 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
+    <link rel="stylesheet" href="the.css">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <div class="wrap" id="holder">
+      <div class="center">        
+        <img id="image-one" />
+        <div class="center hide-after-load">
+          <p>Drag your file here</p>
+          <p>or click</p>
+        </div>
+      </div>  
+    </div>
+    <div class="wrap compressed">
+      <div class="center">
+        <img id="image-two" />       
+        <div class="center">
+          <p class="hide-after-load">Waiting for file upload</p>
+          <button class="show-after-load" id="save-button">Save</button>
+        </div>
+        <div class="loader"></div>
+      </div>
+    </div>    
+    <script src="html.js"></script>
   </body>
 </html>
